@@ -1,0 +1,4 @@
+:schedule:
+  PruneDiariesWorker:
+    every: '10m'
+    description: 'Delete already expired diary entries'
