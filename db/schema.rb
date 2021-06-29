@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_29_103746) do
+ActiveRecord::Schema.define(version: 2021_06_29_110731) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
 # Could not dump table "diaries" because of following StandardError
 #   Unknown type 'diary_kind' for column 'kind'
+
+  create_table "notes", force: :cascade do |t|
+    t.text "text", null: false
+    t.bigint "diary_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["diary_id"], name: "index_notes_on_diary_id"
+  end
 
 end
