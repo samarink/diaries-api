@@ -67,6 +67,10 @@ GEM
     concurrent-ruby (1.1.9)
     connection_pool (2.2.5)
     crass (1.0.6)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     e2mmap (0.1.0)
     erubi (1.10.0)
     et-orbi (1.2.4)
@@ -177,6 +181,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  dotenv-rails
   irb
   listen (~> 3.3)
   pg (~> 1.1)
