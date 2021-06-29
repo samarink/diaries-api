@@ -1,3 +1,5 @@
+require 'sidekiq-scheduler'
+
 class PruneDiariesWorker
   include Sidekiq::Worker
 
