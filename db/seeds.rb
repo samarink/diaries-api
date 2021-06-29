@@ -1,7 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Diary.destroy_all
+Note.destroy_all
+
+(1..2).each do |i|
+  diary = Diary.create(title: "public diary N.#{i}", kind: 'public')
+
+  (1..3).each do |j|
+    diary.notes.create(text: "text of the note N.#{j} for diary N.#{i}")
+  end
+end
+
+(1..2).each do |i|
+  diary = Diary.create(title: "private diary N.#{i}", kind: 'private', expiration: 10.minutes.from_now)
+
+  (1..3).each do |j|
+    diary.notes.create(text: "text of the note N.#{j} for diary N.#{i}")
+  end
+end
