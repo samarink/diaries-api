@@ -309,7 +309,7 @@ Same as PUT
 Clone and run the app
 ```bash
 git clone https://github.com/samarink/diaries-api
-cd diaries api
+cd diaries-api
 docker-compose up
 ```
 
