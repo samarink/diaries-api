@@ -306,9 +306,16 @@ Same as PUT
 
 ### Running The App
 
+Clone and run the app
 ```bash
 git clone https://github.com/samarink/diaries-api
 cd diaries api
 docker-compose up
+```
 
+Open another terminal tab and seed the database
+```bash
+docker-compose run api rake db:create
+docker-compose run api rake db:migrate
+docker-compose run api rake db:seed
 ```
