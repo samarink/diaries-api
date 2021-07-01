@@ -61,7 +61,9 @@
 ### Format
 
 `title: string` (required)
+
 `kind: public|private` (required)
+
 `expiration: datetime` (only availalbe with kind set to private)
 
 _Note_: You have to nest your attributes under a diary key
@@ -97,7 +99,9 @@ If diary was not sucesfully created
 `STATUS: 422`
 
 ```json
-["Title can't be blank"]
+[
+  "Title can't be blank"
+]
 ```
 
 ---
@@ -139,7 +143,7 @@ One or more attrubutes to modify
 
 ### Reponse
 
-newly updated diary
+Newly updated diary
 
 `STATUS: 201`
 
@@ -241,7 +245,9 @@ If note was not sucesfully created
 `STATUS: 422`
 
 ```json
-["Text can't be blank"]
+[
+  "Text can't be blank"
+]
 ```
 
 ---
@@ -264,7 +270,7 @@ One or more attrubutes to modify
 
 ### Reponse
 
-newly updated note
+Newly updated note
 
 `STATUS: 201`
 
