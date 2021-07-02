@@ -8,7 +8,7 @@ class Api::NotesController < ApplicationController
   def create
     diary_id = params[:diary_id]
     @diary = Diary.find(diary_id)
-    @note = @diary.notes.create(notes_params)
+    @note = @diary.notes.new(notes_params)
 
     if @note.save
       render json: @note, status: :created
