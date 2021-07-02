@@ -3,6 +3,7 @@ version: '3.9'
 services:
   api:
     build: .
+    image: samarink/daiary-api
     ports:
       - 3000:3000
     depends_on:
@@ -19,7 +20,7 @@ services:
       POSTGRES_PASSWORD: password
 
   redis:
-    image: redis:4.0-alpine
+    image: redis
 
   sidekiq:
     build: .
