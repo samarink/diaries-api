@@ -314,9 +314,7 @@ cd diaries-api
 docker-compose up
 ```
 
-Open another terminal tab and seed the database
+Open another terminal tab and create migrate and seed the database
 ```bash
-docker-compose run api rake db:create
-docker-compose run api rake db:migrate
-docker-compose run api rake db:seed
+docker-compose run api rake db:setup
 ```
