@@ -1,10 +1,28 @@
 # Diary API
 
+- [Running The App](#running-the-app)
 - [Routes Overview](#routes-overview)
 - [Routes Specification](#routes-specification)
   - [Diaries](#diary-routes)
   - [Notes](#note-routes)
-- [Running The App](#running-the-app)
+
+## Running The App
+
+Clone and run the app
+```bash
+git clone https://github.com/samarink/diaries-api
+cd diaries-api
+docker-compose up
+```
+
+Open another terminal tab to create, migrate and seed the database
+
+_Note: Won't work with `docker-compose run api rake db:setup`_
+```bash
+docker-compose run api rake db:create
+docker-compose run api rake db:migrate
+docker-compose run api rake db:seed
+```
 
 ## Routes Overview
 
@@ -302,19 +320,3 @@ Same as PUT
 ### Response
 
 `STATUS: 204`
-
----
-
-### Running The App
-
-Clone and run the app
-```bash
-git clone https://github.com/samarink/diaries-api
-cd diaries-api
-docker-compose up
-```
-
-Open another terminal tab and create migrate and seed the database
-```bash
-docker-compose run api rake db:setup
-```
