@@ -24,6 +24,7 @@ services:
 
   sidekiq:
     build: .
+    image: samarink/daiary-api-sidekiq
     command: bundle exec sidekiq
     depends_on:
       - redis
